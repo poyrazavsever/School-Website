@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}">
+    <title>
+        {% block title %}
+        
+        {% endblock title %}
+    </title>
+</head>
+<body>
+
+    {% include "includes/navbar.html" %}
+    <br><br><br><br>
+    <div class="container">
+        {% include "includes/messages.html" %}
+        {% block body %}
+        
+        {% endblock body %}
+    </div>
+    <br><br><br><br><br><br>
+    {% include "includes/footer.html" %}
+
+
+    
+    {% block script %}
+    
+    {% endblock script %}
+
+
+    <script src="{{ url_for('static', filename='script/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/main.js') }}"></script>
+    <script src="https://geodata.solutions/includes/countrystate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/Lightbox-Gallery.js"></script>
+
+</body>
+</html>

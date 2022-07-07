@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block title %}
+Kayıt Ol
+{% endblock title %}
+
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+
+<br><br>
+<section class="position-relative">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>Kayıt Ol</h2>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 col-xl-4">
+                <div class="card mb-5 shadow-lg">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <div class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4" style="background-color: #576F72;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -64 640 640" width="1em" height="1em" fill="currentColor">
+                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M224 256c70.7 0 128-57.31 128-128S294.7 0 224 0C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3C0 496.5 15.52 512 34.66 512h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM616 200h-48v-48C568 138.8 557.3 128 544 128s-24 10.75-24 24v48h-48C458.8 200 448 210.8 448 224s10.75 24 24 24h48v48C520 309.3 530.8 320 544 320s24-10.75 24-24v-48h48C629.3 248 640 237.3 640 224S629.3 200 616 200z"></path>
+                        </svg></div>
+                        <form class="text-center" method="post">
+
+                            <div class="mb-3">
+                                {{ render_field(form.code, class="form-control", type="text", placeholder="Kod")}}
+                            </div>
+                            
+                            <div class="mb-3">
+                                {{ render_field(form.name,  class="form-control", type="text",placeholder="İsim & Soy isim")}}
+                            </div>
+
+                            <div class="mb-3">
+                                {{ render_field(form.email,  class="form-control", type="email",placeholder="E-posta")}}
+                            </div>
+
+                            <div class="mb-3">                             
+                                {{ render_field(form.password,class="form-control", type="password", placeholder="Parola")}}
+                            </div>
+
+                            <div class="mb-3">
+                                {{ render_field(form.confirm,class="form-control", type="password", placeholder="Parola Doğrula")}}
+                            </div>
+
+                            <br>
+                            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background-color: #576F72;">Kayıt Ol</button></div>
+
+                            <a href="/login" class="text-muted" style="text-decoration: underline; cursor:pointer;">Zaten kayıtlı mısın?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}

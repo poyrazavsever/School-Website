@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="row gy-4 gy-md-0" style="display:flex; justify-content:center;">
+        
+        <div class="col-md-6" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" type="button">
+            <div class="p-xl-5 m-xl-5">
+                <h2 class="text-uppercase fw-bold py-3 mt-2" style="text-align: center;">Sosyal ETKİNLİK VİDEOları</h2>
+                <p class="my-3 py-3" style="text-align: center;">Maksimum 50Mb büyüklüğünde video yükleyebilirsiniz.</p>
+
+                <form style="height: 400px;" name="socialevents" enctype="multipart/form-data">
+
+                    <input class="form-control" type="text" placeholder="Video Başlığı...">
+
+                    <textarea class="form-control w-100 mt-4 rounded h-75" placeholder="Video Açıklaması..."></textarea>
+
+                    <input class="form-control form-control mt-3" type="file" name="s_file">
+
+                    <button class="btn btn-primary mt-4" type="submit" style="background-color: transparent;border-color: #576F72;color: #576F72;">Paylaş</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+# Form ile dosya yükleme işlemi
+@app.route('/upload_socialevents', methods=['POST'])
+def upload_socialevents():
+
+   if request.method == 'POST':
+
+        # formdan dosya gelip gelmediğini kontrol edelim
+      if 'dosya' not in request.files:
+         flash('Dosya seçilmedi')
+         return redirect('upload_socialevents')         
+
+        # kullanıcı dosya seçmemiş ve tarayıcı boş isim göndermiş mi
+      dosya = request.files['dosya']                    
+      if dosya.filename == '':
+         flash('Dosya seçilmedi')
+         return redirect('upload_socialevents')
+
+        # gelen dosyayı güvenlik önlemlerinden geçir
+      if dosya and uzanti_kontrol(dosya.filename):
+         dosyaadi = secure_filename(dosya.filename)
+         dosya.save(os.path.join(app.config['UPLOAD_FOLDER'], dosyaadi))
+         #return redirect(url_for('dosyayukleme',dosya=dosyaadi))
+         return redirect('upload_socialevents/' + dosyaadi)
+      else:
+         flash('İzin verilmeyen dosya uzantısı')
+         return redirect('upload_socialevents')
+
+   else:
+      abort(401)
+
+# Form ile dosya yükleme sayfası
+@app.route('/upload_socialevents')
+@login_required
+def dosyayukleme():
+   return render_template("upload_socialevents.html")
+
+
+# Form ile dosya yükleme sayfası - Sonuç
+@app.route('/upload_socialevents/<string:dosya>')
+def dosyayuklemesonuc(dosya):
+   return render_template("upload_socialevents.html", dosya=dosya)
+

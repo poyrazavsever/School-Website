@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Sosyal Etkinliklere Video Yükle
+{% endblock title %}
+
+{% block body %}
+
+{% with mesajlar = get_flashed_messages() %}
+{% if mesajlar %}
+  <ul class=flashes>
+  {% for mesaj in mesajlar %}
+    <li>{{ mesaj }}</li>
+  {% endfor %}
+  </ul>
+{% endif %}
+{% endwith %}
+
+<form action="/upload_socialevents" method="post" enctype=multipart/form-data>    
+<input type="file" name="dosya">
+<input type="submit" value="Gönder">
+</form>
+
+{% if dosya %}
+<br>
+<img width="250px" src="{{ url_for('static', filename='yuklemeler/'+ dosya) }}" />
+{% endif %}
+
+{% endblock body %}

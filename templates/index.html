@@ -1,0 +1,221 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Ana Sayfa
+{% endblock title %}
+
+{% block body %}
+
+<section>
+    <div class="shadow-lg rounded" data-bss-parallax-bg="true" style="height: 600px;background-image: url(../static/images/mainbg1.jpg);background-position:center; background-size:cover;">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container d-flex flex-column align-items-center py-4 py-xl-5">
+    <div class="row gy-4 row-cols-1 row-cols-md-2 w-100" style="max-width: 800px;">
+        <div class="col order-md-first">
+            <div class="card"><img class="card-img w-100 d-block" src="{{ url_for('static', filename='images/bot1.jpg') }}" style="opacity:.4;">
+                <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4">
+                    <h4><br>12.SINIFLARIMIZLA ÜNİVERSİTE TANIMA GEZİLERİMİZE DEVAM EDİYORUZ...<br><br></h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="col order-md-2">
+            <div class="card"><img class="card-img w-100 d-block" src="{{ url_for('static', filename='images/19mayıs.jpg') }}" style="opacity:.3;">
+                <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4">
+                    <h4><br>19 MAYIS ATATÜRK'Ü ANMA VE GENÇLİK BAYRAMIMIZ KUTLU OLSUN!<br><br></h4>
+                </div>
+            </div>
+        </div>
+        <div class="col order-md-2">
+            <div class="card"><img class="card-img w-100 d-block" src="{{ url_for('static', filename='images/sanat.jpg') }}" style="opacity:.4;">
+                <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4">
+                    <h4><br>ERASMUS PROJESİ KAPSAMINDA ÖĞRENCİLERİMİZİN EMEKLERİYLE BİR SERGİ DÜZENLEDİK.<br><br></h4>
+                </div>
+            </div>
+            <div class="card"></div>
+        </div>
+        <div class="col order-md-2">
+            <div class="card"><img class="card-img w-100 d-block" src="{{ url_for('static', filename='images/resim.jpg') }}" style="opacity:.5;">
+                <div class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4">
+                    <h4><br>RESİM KURSUMUZUN SONUÇLARINI SERGİLEDİK.<br><br></h4>
+                </div>
+            </div>
+            <div class="card"></div>
+        </div>
+    </div>
+</div>
+
+
+<ul class="list-group container mt-5">
+    <li class="list-group-item text-light mt-2" style="background-color: #576f72;display: flex;justify-content: space-between;"><span>Beceri Eğitimi Sınav Sonuçları</span>
+        <a href="{{ url_for('static', filename='downloads/d1.rar') }}" class="btn btn-primary" type="button" style="background-color: #7D9D9C;border-color: #7D9D9C;color: black;">İndir</a>
+    </li>
+
+    <li class="list-group-item text-light mt-2" style="background-color: #576f72;display: flex;justify-content: space-between;"><span>E-Okul ve MESEM Öğrencilerinin Sorumluluk Sınav Tarihleri Açıklanmıştır<br></span>
+        <a href="{{ url_for('static', filename='downloads/d2.rar') }}" class="btn btn-primary" type="button" style="background-color: #7D9D9C;border-color: #7D9D9C;color: black;">İndir</a>
+    </li>
+
+    <li class="list-group-item text-light mt-2" style="background-color: #576f72;display: flex;justify-content: space-between;"><span>Mazaret Sınavlarının Tarih ve Saatleri Açıklanmıştır</span>
+        <a href="{{ url_for('static', filename='downloads/d3.rar') }}" class="btn btn-primary" type="button" style="background-color: #7D9D9C;border-color: #7D9D9C;color: black;">İndir</a>
+    </li>
+
+    <li class="list-group-item text-light mt-2" style="background-color: #576f72;display: flex;justify-content: space-between;"><span>AMP 12. Sınıfların Sene Sonu Beceri Eğitim Sınavı Duyurusu</span>
+        <a href="{{ url_for('static', filename='downloads/d4.rar') }}" class="btn btn-primary" type="button" style="background-color: #7D9D9C;border-color: #7D9D9C;color: black;">İndir</a>
+    </li>
+
+    <li class="list-group-item text-light mt-2" style="background-color: #576f72;display: flex;justify-content: space-between;"><span>2. Dönem - 2. Ortak Sınav Yerleriniz Açıklanmıştır.</span>
+        <a href="{{ url_for('static', filename='downloads/d5.rar') }}" class="btn btn-primary" type="button" style="background-color: #7D9D9C;border-color: #7D9D9C;color: black;">İndir</a>
+    </li>
+
+</ul>
+
+
+
+<div class="container py-4 py-xl-5">
+    <div class="row mb-5">
+        <div class="col-md-8 col-xl-6 text-center mx-auto">
+            <h2>Bağlantılar</h2>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+        <div class="col">
+            <div class="d-flex p-3" style="cursor: pointer;">
+                <div class="px-2">
+                    <a href="https://e-okul.meb.gov.tr/" class="mb-0 mt-1 text-black text-decoration-none fs-5">e-okul Yönetim Bilgi Sistemleri...</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex p-3" style="cursor: pointer;">
+                <div class="px-2">
+                    <a href="https://mebbis.meb.gov.tr/" class="mb-0 mt-1 text-black text-decoration-none fs-5">e-okul Veli Bilgilendirme Sistemi</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex p-3" style="cursor: pointer;">
+                <div class="px-2">
+                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">444 0 MEB</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex p-3" style="cursor: pointer;">
+                <div class="px-2">
+                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">Meb Bilişim Sistemleri Giriş Ekranı</a>
+                </div>
+            </div>
+            <div class="d-flex p-3" style="cursor: pointer;">
+                <div class="px-2">
+                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">MEBBİS</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex p-4" style="cursor: pointer;">
+                <div class="px-2">
+                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">e-Devlet Kapısı</a>
+                </div>
+            </div>
+            <div class="d-flex p-4" style="cursor: pointer;">
+                <div class="px-2">
+                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">Okullarımız</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex p-4" style="cursor: pointer;">
+                <div class="px-2">
+                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">Milli Eğitim Bakanlığı İstatistik</a>
+                </div>
+            </div>
+            <div class="d-flex p-3" style="cursor: pointer;">
+                <div class="px-2">
+                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">Kurumsal E-posta</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container py-4 py-xl-5">
+    <div class="row gy-4 row-cols-2 row-cols-md-4 mt-5 p-4">
+        <div class="col">
+            <h1>Okul durumu</h1>
+            <p>Okulumuzdaki derslik, öğretmen ve öğrenci sayıları sağdaki gibidir.</p>
+        </div>
+        <div class="col">
+            <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg" style="background-color:#7D9D9C !important ;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -64 640 640" width="1em" height="1em" fill="currentColor">
+                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                        <path d="M320 128C328.8 128 336 135.2 336 144V160H352C360.8 160 368 167.2 368 176C368 184.8 360.8 192 352 192H320C311.2 192 304 184.8 304 176V144C304 135.2 311.2 128 320 128zM476.8 98.06L602.4 125.1C624.4 130.9 640 150.3 640 172.8V464C640 490.5 618.5 512 592 512H48C21.49 512 0 490.5 0 464V172.8C0 150.3 15.63 130.9 37.59 125.1L163.2 98.06L302.2 5.374C312.1-1.791 327-1.791 337.8 5.374L476.8 98.06zM256 512H384V416C384 380.7 355.3 352 320 352C284.7 352 256 380.7 256 416V512zM96 192C87.16 192 80 199.2 80 208V272C80 280.8 87.16 288 96 288H128C136.8 288 144 280.8 144 272V208C144 199.2 136.8 192 128 192H96zM496 272C496 280.8 503.2 288 512 288H544C552.8 288 560 280.8 560 272V208C560 199.2 552.8 192 544 192H512C503.2 192 496 199.2 496 208V272zM96 320C87.16 320 80 327.2 80 336V400C80 408.8 87.16 416 96 416H128C136.8 416 144 408.8 144 400V336C144 327.2 136.8 320 128 320H96zM496 400C496 408.8 503.2 416 512 416H544C552.8 416 560 408.8 560 400V336C560 327.2 552.8 320 544 320H512C503.2 320 496 327.2 496 336V400zM320 88C271.4 88 232 127.4 232 176C232 224.6 271.4 264 320 264C368.6 264 408 224.6 408 176C408 127.4 368.6 88 320 88z"></path>
+                    </svg></div>
+                <div class="px-3">
+                    <h2 class="fw-bold mb-0">24</h2>
+                    <p class="mb-0 fw-bolder">Derslik</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg" style="background-color:#7D9D9C !important ;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -64 640 640" width="1em" height="1em" fill="currentColor">
+                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                        <path d="M95.1 64C95.1 28.65 124.7 0 159.1 0C195.3 0 223.1 28.65 223.1 64C223.1 99.35 195.3 128 159.1 128C124.7 128 95.1 99.35 95.1 64zM88 480V400H70.2C59.28 400 51.57 389.3 55.02 378.9L86.16 285.5L57.5 323.3C46.82 337.4 26.75 340.2 12.67 329.5C-1.415 318.8-4.175 298.7 6.503 284.7L65.4 206.1C87.84 177.4 122.9 160 160 160C197.2 160 232.2 177.4 254.6 206.1L313.5 284.7C324.2 298.7 321.4 318.8 307.3 329.5C293.3 340.2 273.2 337.4 262.5 323.3L233.9 285.6L264.1 378.9C268.4 389.3 260.7 400 249.8 400H232V480C232 497.7 217.7 512 200 512C182.3 512 168 497.7 168 480V400H152V480C152 497.7 137.7 512 120 512C102.3 512 88 497.7 88 480H88zM416 64C416 28.65 444.7 0 480 0C515.3 0 544 28.65 544 64C544 99.35 515.3 128 480 128C444.7 128 416 99.35 416 64V64zM472 384V480C472 497.7 457.7 512 440 512C422.3 512 408 497.7 408 480V300.5L395.1 321C385.7 336 365.9 340.5 350.1 331.1C336 321.7 331.5 301.9 340.9 286.1L392.6 204.9C410.2 176.9 440.9 159.1 473.8 159.1H486.2C519.2 159.1 549.8 176.9 567.4 204.9L619.1 286.1C628.5 301.9 624 321.7 609 331.1C594.1 340.5 574.3 336 564.9 321L552 300.5V480C552 497.7 537.7 512 520 512C502.3 512 488 497.7 488 480V384L472 384z"></path>
+                    </svg></div>
+                <div class="px-3">
+                    <h2 class="fw-bold mb-0">1150+</h2>
+                    <p class="mb-0 fw-bolder">Öğrenci</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg" style="background-color:#7D9D9C !important ;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor">
+                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                        <path d="M352 128C352 198.7 294.7 256 224 256C153.3 256 96 198.7 96 128C96 57.31 153.3 0 224 0C294.7 0 352 57.31 352 128zM209.1 359.2L176 304H272L238.9 359.2L272.2 483.1L311.7 321.9C388.9 333.9 448 400.7 448 481.3C448 498.2 434.2 512 417.3 512H30.72C13.75 512 0 498.2 0 481.3C0 400.7 59.09 333.9 136.3 321.9L175.8 483.1L209.1 359.2z"></path>
+                    </svg></div>
+                <div class="px-3">
+                    <h2 class="fw-bold mb-0">70</h2>
+                    <p class="mb-0 fw-bolder">Öğretmen</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="position-relative py-5">
+        <div class="d-md-none"></div>
+        <div class="d-none d-md-block position-absolute top-0 start-0 w-100 h-100"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.8412195688697!2d29.13124191541203!3d40.941146979307646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac69c9f38c9df%3A0x4c0939e9ae3711c1!2sHandan%20Hayrettin%20Yelkikanat%20Mesleki%20Ve%20Teknik%20Anadolu%20Lisesi!5e0!3m2!1str!2str!4v1655308674521!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="position-relative mx-2 my-5 m-md-5">
+            <div class="container position-relative">
+                <div class="row">
+                    <div class="col-md-6 col-xl-5 col-xxl-4 offset-md-6 offset-xl-7 offset-xxl-8">
+
+                        <div>
+
+                            <form class="border rounded shadow p-3 p-md-4 p-lg-5" method="post" style="background: var(--bs-body-bg);">
+                                <h3 class="text-center mb-3">İletişim</h3>
+                                <div class="mb-3"><input class="form-control" type="text" name="name" placeholder="İsim &amp; Soyisim"></div>
+                                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="E-posta"></div>
+                                <div class="mb-3"><textarea class="form-control" name="message" placeholder="Mesajınız" rows="6"></textarea></div>
+                                <div class="mb-3"><button class="btn btn-primary" type="submit" style="background-color: #576f72;border-color: #576f72;">Gönder</button></div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+{% endblock body %}
+
+
+{% block script %}
+
+{% endblock script %}

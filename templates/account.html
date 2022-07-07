@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Hesabım
+{% endblock title %}
+
+{% block body %}
+
+<section class="py-4 py-xl-5">
+    <div class="container h-100">
+        <div class="text-white bg-primary border rounded border-0 py-5 rounded shadow-lg" style="background-color: #7D9D9C !important;">
+            <div class="row h-100">
+                <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
+                    <div>
+                        <h1 class="text-uppercase fw-bold text-white mb-3">ÖğrencİlerİNİZE VİDEO PAYLAŞIN!</h1>
+                        <p class="mb-4">Öğrencilerinizin çözemediği, anlamadığı soruları çözün ve paylaşın.</p>
+
+                        <a href="/upload_socialevents" type="button" class="btn btn-dark" style="width:200px; background-color:transparent; border-color:#F0EBE3; color:#F0EBE3;">
+                            Sosyal Etkinliklere Yükle
+                        </a> 
+
+                        <a href="/upload_lessons" type="button" class="btn btn-dark" style="width:200px; background-color:transparent; border-color:#F0EBE3; color:#F0EBE3;">
+                            Derlese Yükle
+                        </a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock body %}

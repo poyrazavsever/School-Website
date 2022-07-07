@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light navbar-expand-md py-3" style="position: fixed;width: 100%;background-color: #576F72;opacity: 2;z-index: 10;color: white;">
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse text-light" id="navcol-1">
+            <ul class="navbar-nav me-auto text-light">
+                <li class="nav-item"><a class="nav-link active text-light" href="/">Ana Sayfa</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/lessons">Dersler</a></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/fields">Alanlarımız</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/guidance">Rehberlik Servisi</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/socialevents">Sosyal Etkinlikler</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/achievements">Sportif Başarılarımız</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/staff">Kadromuz</a></li>
+                <li class="nav-item"></li>
+            </ul>
+            {% if session["logged_in"]%}
+
+            <a href="/account" class="btn btn-primary btn-uvara" type="button" style="background-color: #7D9D9C;color: black;border-color: #7D9D9C;">Hesabım </a>
+
+            <a href="/logout" class="btn btn-primary btn-uvara mx-3" type="button" style="background-color: #7D9D9C;color: black;border-color: #7D9D9C;">Çıkış Yap</a>
+            {% else %}
+            <a href="/login" class="btn btn-primary btn-uvara" type="button" style="background-color: #7D9D9C;color: black;border-color: #7D9D9C;">Öğretmen Girişi</a>
+            {% endif %}
+        </div>
+    </div>
+</nav>
