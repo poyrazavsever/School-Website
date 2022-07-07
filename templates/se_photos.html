@@ -6,7 +6,7 @@
 
 {% block body %}
 <section>
-    <div data-bss-parallax-bg="true" style="height: 600px;background-image: url(../static/images/dersler.jpg);background-position:center; background-size:cover;"> <!-- Yukarıda url yazan yerde images kısmına fotoğraf atıp kullanabilirsiniz.-->
+    <div data-bss-parallax-bg="true" style="height: 600px;background-image: url(../static/images/alanlarımız.jpg);background-position:center; background-size:cover;"> <!-- Yukarıda url yazan yerde images kısmına fotoğraf atıp kullanabilirsiniz.-->
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
@@ -15,38 +15,35 @@
         </div>
     </div>
 </section>
-<br><br>
+<br><br><br>
 <section class="photo-gallery py-4 py-xl-5">
     <div class="container py-4 py-xl-5">
         <div class="row gy-4 gy-md-0" style="display: flex;justify-content: center;">
             <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" style="display: flex !important;flex-direction: column;">
-                <h1>Dersler</h1>
+                <h1>Sosyal Etkinlikler | Fotoğraflar</h1>
             </div>
         </div>
         <section class="photo-gallery py-4 py-xl-5">
             <div class="container mt-5">
                 <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox="">
 
-                    {% if videos %}
-                        <form action="/searchl" method="post" class="input-group mt-4" style="display: flex;justify-content: center;">
-                            <input type="text" class="w-50 rounded" style="border: 1px solid #576F72;" placeholder="Ara..." name = "keyword">
-                            <button class="btn btn-primary w-20" type="submit" style="background-color:#576F72;border-color: #576F72;color: white;">Ara</button>
-                        </form>
-                        {% for video in videos%}
+                    {% if pictures %}
+
+                        {% for picture in pictures%}
 
                             <div class="col-item p-3">
-                                <br><br><br>
                                 <div class="border p-2 bg-dark text-light rounded" style="background-color:#7D9D9C !important;">
-                                    <video class="img-fluid img-thumbnail shadow-lg border" controls = "controls" style="border-radius:2px;">
-                                        <source src ="{{ url_for('static', filename= video.path) }}" type="video/mp4"/>
-                                    </video>
-                                    <h3 class="mt-2">{{video.title}}</h3>
+                                    <a href="{{ url_for('static', filename= picture.path) }}" target="_blank">
+                                        <img src="{{ url_for('static', filename= picture.path) }}" class="img-fluid img-thumbnail shadow-lg border" style="border-radius:2px;width:380px !important; height:200px">
+                                    </a>
+                                    
+                                    <h3 class="mt-2 ps-2">{{picture.title}}</h3>
                                 </div>
                             </div>
 
                         {% endfor %}
                     {% else %}
-                        <div class='alert alert-warning'>Her hangi bir video bulunmuyor...</div>
+                        <div class='alert alert-warning'>Her hangi bir fotoğraf bulunmuyor...</div>
                     {% endif %}
                 
                 </div>

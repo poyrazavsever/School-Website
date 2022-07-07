@@ -1,4 +1,7 @@
-from wtforms import Form,StringField,TextAreaField,PasswordField, form, meta,validators
+from email import message
+from importlib.machinery import FileFinder
+from tokenize import String
+from wtforms import Form,StringField,TextAreaField,PasswordField, form, meta,validators, FileField
 from passlib.hash import sha256_crypt
 from wtforms.widgets import TextArea
 
@@ -26,9 +29,16 @@ class LoginForm(Form):
 
 #Öğretmenlerin Dersler adı altında video yüklemesi için Form
 
-class UploadLessons(Form):
+class UploadsVideo(Form):
     
-    name = StringField("", validators= [validators.length(min = 6, max = 16)])
+    title = StringField("", validators= [validators.length(min = 6, max = 36)])
     description = TextAreaField("", validators= [validators.length(min = 30, max = 150)], render_kw={"rows" :10,"cols" : 20})
 
+class UploadPicture(Form):
 
+    title = StringField("" , validators=[validators.length(min = 5, max= 36)])
+
+class ContactForm(Form):
+    name = StringField("", validators=[validators.length(min = 6, max=24)])
+    email = StringField("", validators=[validators.Email(message="Lütfen geçerli bir email adresi giriniz.")])
+    message = TextAreaField("", validators=[validators.length(min=30, max=250)], render_kw={"rows": 5,})

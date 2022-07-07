@@ -2,8 +2,9 @@ from flask_mysqldb import MySQL
 from flask import Flask
 
 
-UPLOAD_FOLDER = 'static/videos'  # Filmlerin Yüklendiği Klasör
-EXTENSIONS = set(['mp4'])
+UPLOAD_FILE = 'static/uploads'
+EXTENSİON = set(['mp4'])
+EXTENSİONTWO = set(["png",'txt', 'pdf', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ app.config["MYSQL_USER"] = "root"
 app.config["MYSQL_PASSWORD"] = ""
 app.config["MYSQL_DB"] = "YusufS"
 app.config["MYSQL_CURSORCLASS"] = "DictCursor"
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['UPLOAD_FOLDER'] = UPLOAD_FILE
 
 mysql = MySQL(app)
 

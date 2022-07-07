@@ -5,9 +5,9 @@ from forms import * # Kayıt ol ve Giriş Yap formu. validators(Kontroller)
 from decarators import * # Tekrar giriş yapmayı ve tekrar kayıt olmayı engellemek için decarators.
 from database import * # Database bilgilerini tuttuğumuz dosya.
 
+
+
 #Kayıt olma işlemi
-
-
 @app.route("/register",methods = ["GET","POST"])
 @register_req
 def register():
@@ -78,6 +78,7 @@ def login():
 
 #Çıkış Yapma İşlemi
 @app.route("/logout")
+@login_required
 def logout():
     session.clear()
     return redirect(url_for("index"))

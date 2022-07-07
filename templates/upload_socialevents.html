@@ -5,25 +5,26 @@ Sosyal Etkinliklere Video Yükle
 {% endblock title %}
 
 {% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+<div class="container">
+    <div class="row gy-4 gy-md-0" style="display:flex; justify-content:center;">
+        
+        <div class="col-md-6" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" type="button">
+            <div class="p-xl-5 m-xl-5">
+                <h2 class="text-uppercase fw-bold py-3 mt-2" style="text-align: center;">Sosyal Etkİnlİk VİDEOları</h2>
+                <p class="my-3 py-3" style="text-align: center;">Maksimum 50Mb büyüklüğünde video yükleyebilirsiniz.</p>
 
-{% with mesajlar = get_flashed_messages() %}
-{% if mesajlar %}
-  <ul class=flashes>
-  {% for mesaj in mesajlar %}
-    <li>{{ mesaj }}</li>
-  {% endfor %}
-  </ul>
-{% endif %}
-{% endwith %}
+                <form style="height: 500px;" name="socialevents" method="post">
 
-<form action="/upload_socialevents" method="post" enctype=multipart/form-data>    
-<input type="file" name="dosya">
-<input type="submit" value="Gönder">
-</form>
+                    {{ render_field(form.title, class="form-control", type="text", placeholder="Video Başlığı...")}}
 
-{% if dosya %}
-<br>
-<img width="250px" src="{{ url_for('static', filename='yuklemeler/'+ dosya) }}" />
-{% endif %}
+                    {{ render_field(form.description, class="form-control w-100 mt-4 rounded h-100", placeholder="Video Açıklaması...", style = "height:85%  !important;")}}
+
+                    <button class="btn btn-primary mt-4" type="submit" style="background-color: transparent;border-color: #576F72;color: #576F72;">Paylaş</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock body %}

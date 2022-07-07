@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Giriş Yap.
+{% endblock title %}
+
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+<br><br>
+<section class="position-relative py-4 py-xl-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>Fotoğraf Seç</h2>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 col-xl-4">
+                <div class="card mb-5 shadow-lg">
+                    <div class="card-body d-flex flex-column align-items-center">
+
+                        <form action="/dosyayukle3" method="post" enctype=multipart/form-data>  
+                            <div class="mb3">
+                                <input type="file" name="dosya" class="form-control" id="inputGroupFile01">
+                            </div>  
+
+                            <br>
+                            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background-color: #576F72;">Seç</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}

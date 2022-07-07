@@ -5,7 +5,17 @@ Hesabım
 {% endblock title %}
 
 {% block body %}
-
+<section>
+    <div data-bss-parallax-bg="true" style="height: 600px;background-image: url(../static/images/rehberlik2.jpg);background-position:center; background-size:cover;"> <!-- Yukarıda url yazan yerde images kısmına fotoğraf atıp kullanabilirsiniz.-->
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
 <section class="py-4 py-xl-5">
     <div class="container h-100">
         <div class="text-white bg-primary border rounded border-0 py-5 rounded shadow-lg" style="background-color: #7D9D9C !important;">
@@ -15,17 +25,33 @@ Hesabım
                         <h1 class="text-uppercase fw-bold text-white mb-3">ÖğrencİlerİNİZE VİDEO PAYLAŞIN!</h1>
                         <p class="mb-4">Öğrencilerinizin çözemediği, anlamadığı soruları çözün ve paylaşın.</p>
 
-                        <a href="/upload_socialevents" type="button" class="btn btn-dark" style="width:200px; background-color:transparent; border-color:#F0EBE3; color:#F0EBE3;">
-                            Sosyal Etkinliklere Yükle
+                        <a href="/dosyayukleme2" type="button" class="btn btn-dark p-3" style="width:300px; background-color:#F0EBE3; border-color:#F0EBE3; color:black;">
+                            Sosyal Etkinliklere Video Yükle
                         </a> 
+                        <br><br>
 
-                        <a href="/upload_lessons" type="button" class="btn btn-dark" style="width:200px; background-color:transparent; border-color:#F0EBE3; color:#F0EBE3;">
-                            Derlese Yükle
+                        <a href="/selectpicture" type="button" class="btn btn-dark p-3" style="width:300px; background-color:#F0EBE3; border-color:#F0EBE3; color:black;">
+                            Sosyal Etkinliklere Resim Yükle
+                        </a> 
+                        <br><br>
+
+                        <a href="/dosyayukleme" type="button" class="btn btn-dark p-3" style="width:300px; background-color:#F0EBE3; border-color:#F0EBE3; color:black;">
+                            Derslere Video Yükle
                         </a> 
                     </div>
                 </div>
             </div>
         </div>
+        <br><br><br>
+        <h3>Video ve Fotoğraflarınız :</h3>
+        <br>
+        <hr width="25%">
+        <br><br>
+        <a href="/account/lesson_video" class="text-left btn btn-dark m-3" style="background-color:#7D9D9C !important; border-color:#7D9D9C;">Ders Videolarım</a>
+        <a href="/account/social_video" class="text-left btn btn-dark m-3" style="background-color:#7D9D9C !important; border-color:#7D9D9C;">Sosyal Etkinlik Videolarım</a>
+        <a href="/account/social_photo" class="text-left btn btn-dark m-3" style="background-color:#7D9D9C !important; border-color:#7D9D9C;">Sosyal Etkinlik Fotoğraflarım</a>
+
+
     </div>
 </section>
 

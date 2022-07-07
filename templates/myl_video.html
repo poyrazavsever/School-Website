@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Hesabım
+{% endblock title %}
+
+{% block body %}
+<section class="py-4 py-xl-5">
+    <div class="container h-100">
+        <div class="text-white bg-primary border rounded border-0 py-5 rounded shadow-lg" style="background-color: #7D9D9C !important;">
+            <div class="row h-100">
+                <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
+                    <div>
+                        <h1 class="text-uppercase fw-bold text-white mb-3">ÖğrencİlerİNİZE VİDEO PAYLAŞIN!</h1>
+                        <p class="mb-4">Öğrencilerinizin çözemediği, anlamadığı soruları çözün ve paylaşın.</p>
+
+                        <a href="/dosyayukleme2" type="button" class="btn btn-dark p-3" style="width:300px; background-color:#F0EBE3; border-color:#F0EBE3; color:black;">
+                            Sosyal Etkinliklere Video Yükle
+                        </a> 
+                        <br><br>
+
+                        <a href="/selectpicture" type="button" class="btn btn-dark p-3" style="width:300px; background-color:#F0EBE3; border-color:#F0EBE3; color:black;">
+                            Sosyal Etkinliklere Resim Yükle
+                        </a> 
+                        <br><br>
+
+                        <a href="/dosyayukleme" type="button" class="btn btn-dark p-3" style="width:300px; background-color:#F0EBE3; border-color:#F0EBE3; color:black;">
+                            Derslere Video Yükle
+                        </a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <a href="/account/social_video" class="text-left btn btn-dark  m-3" style="background-color:#7D9D9C !important; border-color:#7D9D9C;">Sosyal Etkinlik Videolarım</a>
+        <a href="/account/social_photo" class="text-left btn btn-dark  m-3" style="background-color:#7D9D9C !important; border-color:#7D9D9C;">Sosyal Etkinlik Fotoğraflarım</a>
+
+        <hr>
+
+        <section class="photo-gallery py-4 py-xl-5">
+            <div class="container py-4 py-xl-5">
+                <div class="row gy-4 gy-md-0" style="display: flex;justify-content: center;">
+                    <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" style="display: flex !important;flex-direction: column;">
+                        <h1>Ders Videolarım</h1>
+                    </div>
+                </div>
+                <section class="photo-gallery py-4 py-xl-5">
+                    <div class="container mt-5">
+                        <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox="">
+        
+                            {% if lesson_videos %}
+        
+                                {% for video in lesson_videos%}
+        
+                                    <div class="col-item p-3">
+                                        <div class="border p-2 bg-dark text-light rounded" style="background-color:#7D9D9C !important;">
+                                            <video class="img-fluid img-thumbnail shadow-lg border" controls = "controls" style="border-radius:2px;">
+                                                <source src ="{{ url_for('static', filename= video.path) }}" type="video/mp4"/>
+                                            </video>
+                                            <h3 class="mt-2">{{video.title}}</h3>
+                                            <a href="/ldelete/{{video.ID}}" class="btn btn-danger">Sil</a>
+                                        </div>
+                                    </div>
+        
+                                {% endfor %}
+                            {% else %}
+                                <div class='alert alert-warning'>Her hangi bir video bulunmuyor...</div>
+                            {% endif %}
+                        
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</section>
+
+
+{% endblock body %}

@@ -5,7 +5,17 @@ Rehberlik Servisimiz
 {% endblock title %}
 
 {% block body %}
-<br><br><br><br><br><br>
+<section>
+    <div data-bss-parallax-bg="true" style="height: 600px;background-image: url(../static/images/rehberlik2.jpg);background-position:center; background-size:cover;"> <!-- Yukarıda url yazan yerde images kısmına fotoğraf atıp kullanabilirsiniz.-->
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
 <section class="py-4 py-xl-5">
     <div class="container h-100">
         <div class="row h-100">
@@ -21,54 +31,50 @@ Rehberlik Servisimiz
     <div class="row">
         <div class="col-md-8 col-xl-6 mx-auto p-4">
             <div class="d-flex align-items-center align-items-md-start align-items-xl-center" style="display: block;">
-                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style="background-color: #7D9D9C;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-book">
-                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"></path>
-                    </svg></div>
+                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style="background-color: #7D9D9C;"><img src="../static/images/book.svg" style="width:40px; color:white;"></div>
                 <div>
                     <h4>Verimli ders çalışma yöntemleri</h4>
-                    <p>Etkili ve verimli ders çalışma bir öğrenciyi başarıya götürecek en önemli faktörlerden biridir. Her öğrencinin bir diğerinden farklı olduğu...</p><a class="btn btn-primary" type="button" style="float: right;background: #576F72;border-color: #576F72;">Daha fazla oku</a>
+                    <p>Etkili ve verimli ders çalışma bir öğrenciyi başarıya götürecek en önemli faktörlerden biridir. Her öğrencinin bir diğerinden farklı olduğu...</p>
+
+                    <a href="#" class="btn btn-primary" type="button" style="float: right;background: #576F72;border-color: #576F72;">Daha fazla oku</a> <!-- Href kısmına linki koyacaksınız.-->
                 </div>
             </div>
             <hr class="my-5">
             <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
-                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style="background-color: #576F72;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pencil-fill">
-                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"></path>
-                    </svg></div>
+                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style="background-color: #576F72;"><img src="../static/images/pen.svg" style="width: 40px;"></div>
                 <div>
                     <h4>Mesleğim Hayatım Portalı</h4>
-                    <p>Meslek lisesi öğrencilerine uluslar arası ödül, meslek lisesi öğrencileri elektrikli formula 1 aracı üretti...</p><a class="btn btn-primary" type="button" style="float: right;background: #576F72;border-color: #576F72;">Daha fazla oku</a>
+                    <p>Meslek lisesi öğrencilerine uluslar arası ödül, meslek lisesi öğrencileri elektrikli formula 1 aracı üretti...</p>
+                    <a href="#" class="btn btn-primary" type="button" style="float: right;background: #576F72;border-color: #576F72;">Daha fazla oku</a> <!-- Href kısmına linki koyacaksınız.-->
                 </div>
             </div>
             <hr class="my-5">
             <div class="d-flex align-items-center align-items-md-start align-items-xl-center" style="display: block;">
-                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style="background-color: #7D9D9C;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-book">
-                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"></path>
-                    </svg></div>
+                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style="background-color: #7D9D9C;"><img src="../static/images/book.svg" style="width:40px; color:white;"></div>
                 <div>
                     <h4>Ergeni Takdir ve Eleştirmen Gücü</h4>
-                    <p>Verdiğiniz linke ulaşılmıyor. Buraya özet geçebilirsiniz. Özet satırı kaplarsa daha iyi olur.</p><a class="btn btn-primary" type="button" style="float: right;background: #576F72;border-color: #576F72;">Daha fazla oku</a>
+                    <p>Verdiğiniz linke ulaşılmıyor. Buraya özet geçebilirsiniz. Özet satırı kaplarsa daha iyi olur.</p>
+                    <a href="#" class="btn btn-primary" type="button" style="float: right;background: #576F72;border-color: #576F72;">Daha fazla oku</a> <!-- Href kısmına linki koyacaksınız.-->
                 </div>
             </div>
             <hr class="my-5">
         </div>
         <div class="col-md-8 col-xl-6 mx-auto p-4">
             <div class="d-flex align-items-center align-items-md-start align-items-xl-center" style="display: block;">
-                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style="background-color: #576F72;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pencil-fill">
-                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"></path>
-                    </svg></div>
+                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style="background-color: #576F72;"><img src="../static/images/pen.svg" style="width: 40px;"></div>
                 <div>
                     <h4>Otizm: Hastalık Değil, Farklılık</h4>
-                    <p>Otizm hastalık değil, farklılıktır. Benim yanımda ol. Farkındalık demek; bilmek, olduğu gibi görmek anlayışlı bir tutum geliştirmek demek. Siz de otizmi fark edin, görmezden gelmeyin!</p><a class="btn btn-primary" type="button" style="float: right;background: #576F72;border-color: #576F72;">Daha fazla oku</a>
+                    <p>Otizm hastalık değil, farklılıktır. Benim yanımda ol. Farkındalık demek; bilmek, olduğu gibi görmek anlayışlı bir tutum geliştirmek demek. Siz de otizmi fark edin, görmezden gelmeyin!</p>
+                    <a href="#" class="btn btn-primary" type="button" style="float: right;background: #576F72;border-color: #576F72;">Daha fazla oku</a> <!-- Href kısmına linki koyacaksınız.-->
                 </div>
             </div>
             <hr class="my-5">
             <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
-                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style="background-color: #7D9D9C;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-book">
-                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"></path>
-                    </svg></div>
+                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style="background-color: #7D9D9C;"><img src="../static/images/book.svg" style="width:40px; color:white;"></div>
                 <div>
                     <h4>Mesleki Eğitim</h4>
-                    <p>Mesleki eğitim; toplumsal hayatın her alanında ihtiyaç duyulan mesleklerde kalifiye teknik elemanlar yetiştirilmesi için gerekli bilgi ve...</p><a class="btn btn-primary" type="button" style="float: right;background: #576F72;border-color: #576F72;">Daha fazla oku</a>
+                    <p>Mesleki eğitim; toplumsal hayatın her alanında ihtiyaç duyulan mesleklerde kalifiye teknik elemanlar yetiştirilmesi için gerekli bilgi ve...</p>
+                    <a href="#" class="btn btn-primary" type="button" style="float: right;background: #576F72;border-color: #576F72;">Daha fazla oku</a> <!-- Href kısmına linki koyacaksınız.-->
                 </div>
             </div>
             <hr class="my-5">

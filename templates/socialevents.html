@@ -5,26 +5,27 @@
 {% endblock title %}
 
 {% block body %}
-<section class="photo-gallery py-4 py-xl-5">
-    <div class="container py-4 py-xl-5">
-        <div class="row gy-4 gy-md-0" style="display: flex;justify-content: center;">
-            <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" style="display: flex !important;flex-direction: column;">
-                <h1>Sosyal Etkinlikler</h1>
-                <div class="input-group mt-4" style="display: flex;justify-content: center;"><input type="text" class="w-75 rounded" style="border: 1px solid #576F72;" placeholder="Ara..."><button class="btn btn-primary w-20" type="button" style="background-color: transparent;border-color: #576F72;color: #576F72;">Button</button></div>
-            </div>
-        </div>
-        <section class="photo-gallery py-4 py-xl-5">
-            <div class="container">
-                <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox="">
-                    <div class="col item"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid p-3" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></a></div>
-                    <div class="col item"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid p-3" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></a></div>
-                    <div class="col item"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid p-3" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></a></div>
-                    <div class="col item"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid p-3" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></a></div>
-                    <div class="col item"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid p-3" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></a></div>
-                    <div class="col item"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid p-3" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></a></div>
+<section>
+    <div data-bss-parallax-bg="true" style="height: 600px;background-image: url(../static/images/alanlarımız.jpg);background-position:center; background-size:cover;"> <!-- Yukarıda url yazan yerde images kısmına fotoğraf atıp kullanabilirsiniz.-->
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                 </div>
             </div>
-        </section>
+        </div>
     </div>
 </section>
+<br><br><br>
+<div class="container text-center" style="display:flex; justify-content:center; align-items:center; flex-direction:column;">
+    <h2>Sosyal Etkinlikler</h2>
+    <p class="pt-3">Okuldaki sosyal etkinler ile ilgili resimlere ve videolara aşağıdaki butonlardan ulabilirsiniz.</p>
+    <br><br>
+    <div>
+        <a href="/socialevents/videos" class="btn btn-dark p-3 mx-3" style="width:150px; background-color:#576F72; border-color:#576F72;">Videoları Gör</a>
+        <a href="/socialevents/pictures" class="btn btn-dark p-3 mx-3" style="width:150px; background-color:#576F72; border-color:#576F72;">Resimleri Gör</a>
+    </div>
+    
+
+</div>
+
 {% endblock body %}

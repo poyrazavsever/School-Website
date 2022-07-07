@@ -5,16 +5,26 @@ Alanlarımız
 {% endblock title %}
 
 {% block body %}
-<br><br><br><br><br>
+<section>
+    <div data-bss-parallax-bg="true" style="height: 600px;background-image: url(../static/images/alanlarımız.jpg);background-position:center; background-size:cover;"> <!-- Yukarıda url yazan yerde images kısmına fotoğraf atıp kullanabilirsiniz.-->
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
 <div class="container py-4 py-xl-5">
     <div class="row gy-4 gy-md-0">
         <div class="col-md-6">
             <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover shadow-lg" style="min-height: 300px;" src="{{ url_for('static', filename='images/bilisim-bolumunun-dallari-ve-meslekleri-fotograflar-1-gelgez-700x420.jpg') }}"></div>
-        </div>
+        </div><!-- Buradaki src etiketine istediğiniz fotoğrafı koyun.-->
         <div class="col-md-6 d-md-flex align-items-md-center">
             <div style="max-width: 350px;">
                 <h2 class="text-uppercase fw-bold">BİLİŞİM TEKNOJİLERİ BÖLÜMÜ</h2>
-                <p class="my-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis illum expedita numquam culpa dolor laboriosam, exercitationem soluta animi perspiciatis vel, vitae inventore? Obcaecati accusamus provident suscipit corrupti vitae sequi nemo?</p>
+                <p class="my-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis illum expedita numquam culpa dolor laboriosam, exercitationem soluta animi perspiciatis vel, vitae inventore? Obcaecati accusamus provident suscipit corrupti vitae sequi nemo?</p> <!-- Buradaki p etiketinin arasına yazınızı yazın.-->
             </div>
         </div>
     </div>
@@ -25,22 +35,24 @@ Alanlarımız
             <div style="max-width: 350px;">
                 <h2 class="text-uppercase fw-bold">Web programcILIĞI</h2>
                 <p class="my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt perferendis animi unde eveniet molestias eos magnam fugiat, consequuntur rerum nam odit maiores, doloremque vitae odio sequi nesciunt debitis. Obcaecati, nam!</p>
+                <!-- Buradaki p etiketinin arasına yazınızı yazın.-->
             </div>
         </div>
         <div class="col-md-6">
-            <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover shadow-lg" style="min-height: 300px;" src="{{ url_for('static', filename='images/MTYwYTNhNzBlNjQ4ZGU.jpg') }}"></div>
+            <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover shadow-lg" style="min-height: 300px;" src="{{ url_for('static', filename='images/MTYwYTNhNzBlNjQ4ZGU.jpg') }}"></div><!-- Buradaki src etiketine istediğiniz fotoğrafı koyun.-->
         </div>
     </div>
 </div>
 <div class="container py-4 py-xl-5">
     <div class="row gy-4 gy-md-0">
         <div class="col-md-6">
-            <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover shadow-lg" style="min-height: 300px;" src="{{ url_for('static', filename='images/kodlama5.jpg') }}"></div>
+            <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover shadow-lg" style="min-height: 300px;" src="{{ url_for('static', filename='images/kodlama5.jpg') }}"></div><!-- Buradaki src etiketine istediğiniz fotoğrafı koyun.-->
         </div>
         <div class="col-md-6 d-md-flex align-items-md-center">
             <div style="max-width: 350px;">
                 <h2 class="text-uppercase fw-bold">İŞ YERİ AÇMA BELGESİ</h2>
                 <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae vero quis sequi error aliquam tempora eius facere eligendi nesciunt inventore? Facilis minus dolore distinctio quis accusantium ipsa. Fugiat, dolor temporibus!</p>
+                <!-- Buradaki p etiketinin arasına yazınızı yazın.-->
             </div>
         </div>
     </div>
@@ -51,22 +63,24 @@ Alanlarımız
             <div style="max-width: 350px;">
                 <h2 class="text-uppercase fw-bold">ELEKTRİK ELEKTRONİK BÖLÜMÜ</h2>
                 <p class="my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolore, culpa ullam cum quo illo, error repellendus unde sint sed accusamus a! Ea error quam unde exercitationem? Quo, id beatae!</p>
+                <!-- Buradaki p etiketinin arasına yazınızı yazın.-->
             </div>
         </div>
         <div class="col-md-6">
-            <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover shadow-lg" style="min-height: 300px;" src="{{ url_for('static', filename='images/elektrik.jpg') }}"></div>
+            <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover shadow-lg" style="min-height: 300px;" src="{{ url_for('static', filename='images/elektrik.jpg') }}"></div><!-- Buradaki src etiketine istediğiniz fotoğrafı koyun.-->
         </div>
     </div>
 </div>
 <div class="container py-4 py-xl-5">
     <div class="row gy-4 gy-md-0">
         <div class="col-md-6">
-            <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover shadow-lg" style="min-height: 300px;" src="{{ url_for('static', filename='images/endustriyelbakimonarim.png') }}"></div>
+            <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover shadow-lg" style="min-height: 300px;" src="{{ url_for('static', filename='images/endustriyelbakimonarim.png') }}"></div> <!-- Buradaki src etiketine istediğiniz fotoğrafı koyun.-->
         </div>
         <div class="col-md-6 d-md-flex align-items-md-center">
             <div style="max-width: 350px;">
                 <h2 class="text-uppercase fw-bold">endüstRİYEL BAKIM VE ONARIM</h2>
                 <p class="my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla suscipit laboriosam sapiente optio? Error eius necessitatibus, commodi corporis quisquam, in asperiores voluptatibus neque aspernatur eos tenetur recusandae sapiente hic alias.</p>
+                <!-- Buradaki p etiketinin arasına yazınızı yazın.-->
             </div>
         </div>
     </div>

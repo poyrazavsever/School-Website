@@ -6,8 +6,10 @@ Ana Sayfa
 
 {% block body %}
 
+{% from "includes/formhelpers.html" import render_field %}
+
 <section>
-    <div class="shadow-lg rounded" data-bss-parallax-bg="true" style="height: 600px;background-image: url(../static/images/mainbg1.jpg);background-position:center; background-size:cover;">
+    <div data-bss-parallax-bg="true" style="height: 600px;background-image: url(../static/images/mainbg1.jpg);background-position:center; background-size:cover;">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
@@ -49,42 +51,43 @@ Ana Sayfa
             </div>
             <div class="card"></div>
         </div>
+
+        
     </div>
 </div>
 
 
 <ul class="list-group container mt-5">
-    <li class="list-group-item text-light mt-2" style="background-color: #576f72;display: flex;justify-content: space-between;"><span>Beceri Eğitimi Sınav Sonuçları</span>
-        <a href="{{ url_for('static', filename='downloads/d1.rar') }}" class="btn btn-primary" type="button" style="background-color: #7D9D9C;border-color: #7D9D9C;color: black;">İndir</a>
+    <li class="list-group-item text-light mt-2" style="background-color: #7D9D9C;display: flex;justify-content: space-between;"><span>Beceri Eğitimi Sınav Sonuçları</span>
+        <a href="{{ url_for('static', filename='downloads/d1.rar') }}" class="btn btn-primary" type="button" style="background-color: #F0EBE3;border-color: #F0EBE3;color: black;">İndir</a>
     </li>
 
-    <li class="list-group-item text-light mt-2" style="background-color: #576f72;display: flex;justify-content: space-between;"><span>E-Okul ve MESEM Öğrencilerinin Sorumluluk Sınav Tarihleri Açıklanmıştır<br></span>
-        <a href="{{ url_for('static', filename='downloads/d2.rar') }}" class="btn btn-primary" type="button" style="background-color: #7D9D9C;border-color: #7D9D9C;color: black;">İndir</a>
+    <li class="list-group-item text-light mt-2" style="background-color: #7D9D9C;display: flex;justify-content: space-between;"><span>E-Okul ve MESEM Öğrencilerinin Sorumluluk Sınav Tarihleri Açıklanmıştır<br></span>
+        <a href="{{ url_for('static', filename='downloads/d2.rar') }}" class="btn btn-primary" type="button" style="background-color: #F0EBE3;border-color: #F0EBE3;color: black;">İndir</a>
     </li>
 
-    <li class="list-group-item text-light mt-2" style="background-color: #576f72;display: flex;justify-content: space-between;"><span>Mazaret Sınavlarının Tarih ve Saatleri Açıklanmıştır</span>
-        <a href="{{ url_for('static', filename='downloads/d3.rar') }}" class="btn btn-primary" type="button" style="background-color: #7D9D9C;border-color: #7D9D9C;color: black;">İndir</a>
+    <li class="list-group-item text-light mt-2" style="background-color:#7D9D9C;display: flex;justify-content: space-between;"><span>Mazaret Sınavlarının Tarih ve Saatleri Açıklanmıştır</span>
+        <a href="{{ url_for('static', filename='downloads/d3.rar') }}" class="btn btn-primary" type="button" style="background-color: #F0EBE3;border-color: #F0EBE3;color: black;">İndir</a>
     </li>
 
-    <li class="list-group-item text-light mt-2" style="background-color: #576f72;display: flex;justify-content: space-between;"><span>AMP 12. Sınıfların Sene Sonu Beceri Eğitim Sınavı Duyurusu</span>
-        <a href="{{ url_for('static', filename='downloads/d4.rar') }}" class="btn btn-primary" type="button" style="background-color: #7D9D9C;border-color: #7D9D9C;color: black;">İndir</a>
+    <li class="list-group-item text-light mt-2" style="background-color: #7D9D9C;display: flex;justify-content: space-between;"><span>AMP 12. Sınıfların Sene Sonu Beceri Eğitim Sınavı Duyurusu</span>
+        <a href="{{ url_for('static', filename='downloads/d4.rar') }}" class="btn btn-primary" type="button" style="background-color: #F0EBE3;border-color: #F0EBE3;color: black;">İndir</a>
     </li>
 
-    <li class="list-group-item text-light mt-2" style="background-color: #576f72;display: flex;justify-content: space-between;"><span>2. Dönem - 2. Ortak Sınav Yerleriniz Açıklanmıştır.</span>
-        <a href="{{ url_for('static', filename='downloads/d5.rar') }}" class="btn btn-primary" type="button" style="background-color: #7D9D9C;border-color: #7D9D9C;color: black;">İndir</a>
+    <li class="list-group-item text-light mt-2" style="background-color: #7D9D9C;display: flex;justify-content: space-between;"><span>2. Dönem - 2. Ortak Sınav Yerleriniz Açıklanmıştır.</span>
+        <a href="{{ url_for('static', filename='downloads/d5.rar') }}" class="btn btn-primary" type="button" style="background-color: #F0EBE3;border-color: #F0EBE3;color: black;">İndir</a>
     </li>
 
 </ul>
 
-
-
-<div class="container py-4 py-xl-5">
-    <div class="row mb-5">
-        <div class="col-md-8 col-xl-6 text-center mx-auto">
-            <h2>Bağlantılar</h2>
-        </div>
+<br><br><hr><br><br>
+<div class="text-center mb-5 container">
+    <div class="col-md-8 col-xl-6 text-center mx-auto">
+        <h2>Bağlantılar</h2>
     </div>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+</div>
+<div  style="margin-left:150px;">
+    <div class="container row row-cols-1 row-cols-md-2 row-cols-xl-3">
         <div class="col">
             <div class="d-flex p-3" style="cursor: pointer;">
                 <div class="px-2">
@@ -102,43 +105,44 @@ Ana Sayfa
         <div class="col">
             <div class="d-flex p-3" style="cursor: pointer;">
                 <div class="px-2">
-                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">444 0 MEB</a>
+                    <a href="" class="mb-0 mt-1 text-black text-decoration-none fs-5">444 0 MEB</a>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="d-flex p-3" style="cursor: pointer;">
-                <div class="px-2">
-                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">Meb Bilişim Sistemleri Giriş Ekranı</a>
-                </div>
-            </div>
-            <div class="d-flex p-3" style="cursor: pointer;">
-                <div class="px-2">
-                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">MEBBİS</a>
-                </div>
+            <div class="col">
+        <div class="d-flex p-3" style="cursor: pointer;">
+            <div class="px-2">
+                <a href="" class="mb-0 mt-1 text-black text-decoration-none fs-5">Meb Bilişim Sistemleri Giriş Ekranı</a>
             </div>
         </div>
-        <div class="col">
-            <div class="d-flex p-4" style="cursor: pointer;">
+            <div class="d-flex p-3 text-center" style="cursor: pointer;">
                 <div class="px-2">
-                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">e-Devlet Kapısı</a>
-                </div>
-            </div>
-            <div class="d-flex p-4" style="cursor: pointer;">
-                <div class="px-2">
-                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">Okullarımız</a>
+                    <a href="" class="mb-0 mt-1 text-black text-center text-decoration-none fs-5">MEBBİS</a>
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="d-flex p-4" style="cursor: pointer;">
                 <div class="px-2">
-                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">Milli Eğitim Bakanlığı İstatistik</a>
+                    <a href="" class="mb-0 mt-1 text-black text-decoration-none fs-5">e-Devlet Kapısı</a>
+                </div>
+            </div>
+            <div class="d-flex p-4" style="cursor: pointer;">
+                <div class="px-2">
+                    <a href="" class="mb-0 mt-1 text-black text-decoration-none fs-5">Okullarımız</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex p-4" style="cursor: pointer;">
+                <div class="px-2">
+                    <a href="" class="mb-0 mt-1 text-black text-decoration-none fs-5">Milli Eğitim Bakanlığı İstatistik</a>
                 </div>
             </div>
             <div class="d-flex p-3" style="cursor: pointer;">
                 <div class="px-2">
-                    <a class="mb-0 mt-1 text-black text-decoration-none fs-5">Kurumsal E-posta</a>
+                    <a href="" class="mb-0 mt-1 text-black text-decoration-none fs-5">Kurumsal E-posta</a>
+                </div>
             </div>
         </div>
     </div>
@@ -196,12 +200,15 @@ Ana Sayfa
 
                         <div>
 
-                            <form class="border rounded shadow p-3 p-md-4 p-lg-5" method="post" style="background: var(--bs-body-bg);">
+                            <form class="border rounded shadow p-3 p-md-4 p-lg-5" style="background: var(--bs-body-bg);" action="https://formspree.io/f/xdobrzqj" method="POST">
                                 <h3 class="text-center mb-3">İletişim</h3>
-                                <div class="mb-3"><input class="form-control" type="text" name="name" placeholder="İsim &amp; Soyisim"></div>
-                                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="E-posta"></div>
-                                <div class="mb-3"><textarea class="form-control" name="message" placeholder="Mesajınız" rows="6"></textarea></div>
-                                <div class="mb-3"><button class="btn btn-primary" type="submit" style="background-color: #576f72;border-color: #576f72;">Gönder</button></div>
+                                <form class="border rounded shadow p-3 p-md-4 p-lg-5" method="post" style="background: var(--bs-body-bg);">
+                                    <h3 class="text-center mb-3">İletişim</h3>
+                                    <div class="mb-3"><input class="form-control" type="text" name="name" placeholder="İsim &amp; Soyisim"></div>
+                                    <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="E-posta"></div>
+                                    <div class="mb-3"><textarea class="form-control" name="message" placeholder="Mesajınız" rows="6"></textarea></div>
+                                    <div class="mb-3"><button class="btn btn-primary" type="submit" style="background-color: #576f72;border-color: #576f72;">Gönder</button></div>
+                                </form>
                             </form>
 
                         </div>
@@ -211,8 +218,6 @@ Ana Sayfa
         </div>
     </section>
 </div>
-
-
 {% endblock body %}
 
 

@@ -14,25 +14,14 @@ Sosyal Etkinliklere Video Yükle
                 <h2 class="text-uppercase fw-bold py-3 mt-2" style="text-align: center;">Dersler VİDEOları</h2>
                 <p class="my-3 py-3" style="text-align: center;">Maksimum 50Mb büyüklüğünde video yükleyebilirsiniz.</p>
 
-                <form style="height: 500px;" name="socialevents" enctype="multipart/form-data" action="/upload_lessons" method="post">
+                <form style="height: 500px;" name="socialevents" method="post">
 
-                    {{ render_field(form.name, class="form-control", type="text", placeholder="Video Başlığı...")}}
+                    {{ render_field(form.title, class="form-control", type="text", placeholder="Video Başlığı...")}}
 
                     {{ render_field(form.description, class="form-control w-100 mt-4 rounded h-100", placeholder="Video Açıklaması...", style = "height:85%  !important;")}}
 
-                    <input class="form-control form-control mt-5" type="file" name="video_file">
-
                     <button class="btn btn-primary mt-4" type="submit" style="background-color: transparent;border-color: #576F72;color: #576F72;">Paylaş</button>
-
                 </form>
-
-                {% if video_file %}
-                    <br>
-                    <video width="360" height="320" controls="controls">
-                        <source src="{{ url_for('static', filename='videos/'+ dosya) }}" type="video/mp4" />
-                    </video>
-                {% endif %}
-
             </div>
         </div>
     </div>

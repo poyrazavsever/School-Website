@@ -4,13 +4,12 @@
             <ul class="navbar-nav me-auto text-light">
                 <li class="nav-item"><a class="nav-link active text-light" href="/">Ana Sayfa</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="/lessons">Dersler</a></li>
-                <li class="nav-item"></li>
                 <li class="nav-item"><a class="nav-link text-light" href="/fields">Alanlarımız</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="/guidance">Rehberlik Servisi</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="/socialevents">Sosyal Etkinlikler</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="/achievements">Sportif Başarılarımız</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="/staff">Kadromuz</a></li>
-                <li class="nav-item"></li>
+                <li class="nav-item"><a class="nav-link text-light" href=""></a></li>
+                <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: white;">Diğer </a>
+                    <div class="dropdown-menu"><a class="dropdown-item" href="/achievements">Sportif Başarılarımız</a><a class="dropdown-item" href="/socialevents">Sosyal Etkinlikler</a><a class="dropdown-item" href="/staff">Kadromuz</a></div>
+                </li>
             </ul>
             {% if session["logged_in"]%}
 
